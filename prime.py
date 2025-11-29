@@ -1,3 +1,5 @@
+import time
+
 inputnum = []
 numlis = []
 mem = []
@@ -7,6 +9,9 @@ chk = 0
 #input(0と1は除外)
 inputnum = int(input())
 numlis = list(range(2, inputnum + 1)) 
+
+#計測開始
+start = time.perf_counter() 
 
 #main
 while numlis:
@@ -27,5 +32,11 @@ while numlis:
     #memをクリア
     mem.clear()
 
+#計測終了
+end = time.perf_counter() 
 
 print(prime)
+
+#msで出力
+elapsed_ms = (end - start) * 1000
+print(f"処理時間: {elapsed_ms:.3f} ms")
