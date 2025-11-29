@@ -5,32 +5,32 @@ sieve = [1] * (inputnum + 1)
 sieve[0] = sieve[1] = 0
 count = 0
 
-#è¨ˆæ¸¬é–‹å§‹
+#Œv‘ªŠJn
 start = time.perf_counter() 
 
-#2ã‹ã‚‰2æ¯ã«(inputnum)ã¾ã§
+#2‚©‚ç2–ˆ‚É(inputnum)‚Ü‚Å
 for i in range(3, int(inputnum**0.5) + 1, 2):
-    #ãƒã‚§ãƒƒã‚¯å‰ã‹ã©ã†ã‹
+    #ƒ`ƒFƒbƒN‘O‚©‚Ç‚¤‚©
     if sieve[i] == 1:
-        #iã®2ä¹—ã‹ã‚‰2*iæ¯ã«æœ€çµ‚ã¾ã§
+        #i‚Ì2æ‚©‚ç2*i–ˆ‚ÉÅI‚Ü‚Å
         for j in range(i * i, inputnum + 1, 2 * i):
             sieve[j] = 0
 
-#è¨ˆæ¸¬çµ‚äº†
+#Œv‘ªI—¹
 end = time.perf_counter() 
 
 print("2")
 count += 1
 
-#å¶æ•°ã‚’é™¤ã„ãŸsieveãŒ1ã®å ´æ‰€ã‚’å‡ºåŠ›(æ•°å­—ãŒåŒã˜ã ã‹ã‚‰)
+#‹ô”‚ğœ‚¢‚½sieve‚ª1‚ÌêŠ‚ğo—Í(”š‚ª“¯‚¶‚¾‚©‚ç)
 for i in range(3, inputnum + 1, 2):
     if sieve[i] == 1:
         print(i)
         count += 1
 
-# å€‹æ•°å‡ºåŠ›
-print(f"ç´ æ•°ã®å€‹æ•°: {count}")
+# ŒÂ”o—Í
+print(f"‘f”‚ÌŒÂ”: {count}")
 
-#msã§å‡ºåŠ›
+#ms‚Åo—Í
 elapsed_ms = (end - start) * 1000
-print(f"å‡¦ç†æ™‚é–“: {elapsed_ms:.3f} ms")
+print(f"ˆ—ŠÔ: {elapsed_ms:.3f} ms")
