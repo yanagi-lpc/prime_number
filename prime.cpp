@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 int main(){
@@ -35,8 +36,8 @@ int main(){
 
 
     auto msec = chrono::duration_cast<chrono::milliseconds>(time).count();
-    cout << "ˆ—ŽžŠÔ: " << msec << "ms" << endl;
+    cout << "å‡¦ç†æ™‚é–“: " << msec << "ms" << endl;
 
-    cout << "‘f”‚ÌŒÂ”: " << count << endl;
+    cout << "ç´ æ•°ã®å€‹æ•°: " << count << endl;
 
 }

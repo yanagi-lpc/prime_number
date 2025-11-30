@@ -6,37 +6,37 @@ mem = []
 prime = []
 chk = 0
 
-#input(0‚Æ1‚ÍœŠO)
+#input(0ã¨1ã¯é™¤å¤–)
 inputnum = int(input())
 numlis = list(range(2, inputnum + 1)) 
 
-#Œv‘ªŠJn
+#è¨ˆæ¸¬é–‹å§‹
 start = time.perf_counter() 
 
 #main
 while numlis:
 
-    #numlis“à‚ÌÅ¬’l‚ğchk‚Æprime‚É’Ç‰Á
+    #numliså†…ã®æœ€å°å€¤ã‚’chkã¨primeã«è¿½åŠ 
     chk = numlis[0]
     prime.append(chk)
 
-    #chk‚Ì”{”‚ğmem‚É’Ç‰Á
+    #chkã®å€æ•°ã‚’memã«è¿½åŠ 
     for elem in numlis:
         if elem % chk == 0:
             mem.append(elem)
     
-    #numlis‚©‚çmem‚Ì—v‘f‚ğíœ
+    #numlisã‹ã‚‰memã®è¦ç´ ã‚’å‰Šé™¤
     for x in mem:
         numlis.remove(x)
     
-    #mem‚ğƒNƒŠƒA
+    #memã‚’ã‚¯ãƒªã‚¢
     mem.clear()
 
-#Œv‘ªI—¹
+#è¨ˆæ¸¬çµ‚äº†
 end = time.perf_counter() 
 
 print(prime)
 
-#ms‚Åo—Í
+#msã§å‡ºåŠ›
 elapsed_ms = (end - start) * 1000
-print(f"ˆ—ŠÔ: {elapsed_ms:.3f} ms")
+print(f"å‡¦ç†æ™‚é–“: {elapsed_ms:.3f} ms")
