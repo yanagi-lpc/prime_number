@@ -30,7 +30,6 @@ int main(){
 
     for (int i = 3; i <= inputnum; i += 2){
         if (sieve[i] == 1){
-            cout << i << " ";
             count++;
         }
     } 
