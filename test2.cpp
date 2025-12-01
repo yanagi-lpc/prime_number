@@ -10,13 +10,13 @@ int main(){
     int sqrtnum = sqrt(inputnum);
     auto start = chrono::steady_clock::now();
 
-    vector<int> sieve(inputnum + 1, 1);
+    vector<char> sieve(inputnum + 1, 1);
     sieve[0] = sieve[1] = 0;
     int count = 0;
     
     for (int i = 3; i <= sqrtnum; i += 2){
         if (sieve[i] == 1){
-            for (int j = i * i; j <= inputnum; j += 2 * i){
+            for (long long j = i * i; j <= inputnum; j += 2 * i){
                 sieve[j] =0;
             }
         }
